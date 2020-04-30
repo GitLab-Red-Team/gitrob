@@ -1,4 +1,4 @@
-name: Go
+name: Gitrob
 
 on:
   push:
@@ -24,11 +24,7 @@ jobs:
 
     - name: Get dependencies
       run: |
-        go get -v -t -d ./...
-        if [ -f Gopkg.toml ]; then
-            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-            dep ensure
-        fi
+        sudo apt-get install go-dep
 
     - name: Build binaries
       run: sh ./build.sh
