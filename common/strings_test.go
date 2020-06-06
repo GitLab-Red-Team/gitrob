@@ -20,6 +20,9 @@ func TestPluralize(t *testing.T) {
 				Convey("The word should be 'tests'", func() {
 					So(w, ShouldEqual, w2)
 				})
+				Convey("The word should not be 'test'", func() {
+					So(w, ShouldNotEqual, w1)
+				})
 			})
 
 				Convey("If the count is 1", func() {
@@ -27,6 +30,9 @@ func TestPluralize(t *testing.T) {
 
 					Convey("The word should be 'test'", func() {
 						So(w, ShouldEqual, w1)
+					})
+					Convey("The word should not be 'tests'", func() {
+						So(w, ShouldNotEqual, w2)
 					})
 				})
 
@@ -36,6 +42,9 @@ func TestPluralize(t *testing.T) {
 					Convey("The word should be 'tests'", func() {
 						So(w, ShouldEqual, w2)
 					})
+					Convey("The word should not be 'test'", func() {
+						So(w, ShouldNotEqual, w1)
+					})
 				})
 
 				Convey("If the count is -0", func() {
@@ -44,7 +53,9 @@ func TestPluralize(t *testing.T) {
 					Convey("The word should be 'tests'", func() {
 						So(w, ShouldEqual, w2)
 					})
-
+					Convey("The word should not be 'test'", func() {
+						So(w, ShouldNotEqual, w1)
+					})
 			})
 		})
 	})

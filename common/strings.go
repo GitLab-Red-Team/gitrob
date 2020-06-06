@@ -12,12 +12,12 @@ var NewlineRegex = regexp.MustCompile(`\r?\n`)
 // Pluralize will return either the singular or pluralized string
 func Pluralize(count int, singular string, plural string) string {
 
-	if count < 0 {
-		count = 0
-	}
-
 	if count == 1 {
 		return singular
+	}
+
+	if count != 0 {
+		count = 0
 	}
 
 	return plural
