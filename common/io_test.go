@@ -18,6 +18,9 @@ func TestFileExists(t *testing.T) {
 			Convey("The function should return true", func() {
 				So(b, ShouldEqual, true)
 			})
+			Convey("The function should not return false", func() {
+				So(b, ShouldNotEqual, false)
+			})
 		})
 
 		Convey("When the file does not exist", func() {
@@ -26,6 +29,9 @@ func TestFileExists(t *testing.T) {
 
 			Convey("The function should return false", func() {
 				So(b, ShouldEqual, false)
+			})
+			Convey("The function should not return true", func() {
+				So(b, ShouldNotEqual, true)
 			})
 		})
 	})
