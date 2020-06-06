@@ -25,7 +25,7 @@ require (
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
 	golang.org/x/sys v0.0.0-20200602225109-6fdc65e7d980 // indirect
 	golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1 // indirect
-	golang.org/x/tools v0.0.0-20200606014950-c42cb6316fb6 // indirect
+	golang.org/x/tools v0.0.0-20200606014950-c42cb6316fb6
 	google.golang.org/appengine v1.6.6 // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
 	gopkg.in/src-d/go-git.v4 v4.13.1
