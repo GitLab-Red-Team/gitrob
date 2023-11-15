@@ -34,7 +34,7 @@ func CloneRepository(cloneConfig *common.CloneConfiguration) (*git.Repository, s
 	var err error
 	var dir string
 	if !*cloneConfig.InMemClone {
-		dir, err := ioutil.TempDir("", "gitrob")
+		dir, err = ioutil.TempDir("", "gitrob")
 		if err != nil {
 			return nil, "", err
 		}
